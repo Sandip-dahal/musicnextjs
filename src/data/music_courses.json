@@ -1,0 +1,94 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Guitar Fundamentals",
+      "slug": "guitar-fundamentals",
+      "description": "Learn the basics of playing guitar with our comprehensive beginner's course.",
+      "price": 99.99,
+      "instructor": "John Doe",
+      "isFeatured": true,
+      "image":  "https://images.pexels.com/photos/16560234/pexels-photo-16560234.jpeg"
+    },
+    {
+      "id": 2,
+      "title": "Chords and Strumming Patterns",
+      "slug": "chords-and-strumming-patterns",
+      "description": "Master essential open chords and strumming techniques to play your favorite songs.",
+      "price": 109.99,
+      "instructor": "Sarah Mitchell",
+      "isFeatured": false,
+      "image":  "https://images.pexels.com/photos/12544/pexels-photo-12544.jpeg"
+    },
+    {
+      "id": 3,
+      "title": "Intermediate Guitar Techniques",
+      "slug": "intermediate-guitar-techniques",
+      "description": "Take your guitar skills to the next level with fingerpicking, barre chords, and improvisation.",
+      "price": 129.99,
+      "instructor": "Mark Rivera",
+      "isFeatured": false,
+      "image": "https://images.pexels.com/photos/9057791/pexels-photo-9057791.jpeg"
+    },
+    {
+      "id": 4,
+      "title": "Acoustic Guitar Songwriting",
+      "slug": "acoustic-guitar-songwriting",
+      "description": "Learn to write and perform your own songs using acoustic guitar chords, strumming, and melody.",
+      "price": 149.99,
+      "instructor": "Alex Turner",
+      "isFeatured": true,
+      "image":  "https://images.pexels.com/photos/8929485/pexels-photo-8929485.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "Electric Guitar Mastery",
+      "slug": "electric-guitar-mastery",
+      "description": "Master electric guitar techniques including riffs, solos, and effects pedals for rock and blues.",
+      "price": 179.99,
+      "instructor": "Chris Bennett",
+      "isFeatured": false,
+      "image":  "https://images.pexels.com/photos/12393615/pexels-photo-12393615.jpeg"
+    },
+    {
+      "id": 6,
+      "title": "Fingerstyle Guitar Essentials",
+      "slug": "fingerstyle-guitar-essentials",
+      "description": "Develop clean, expressive fingerstyle guitar playing through classical and contemporary pieces.",
+      "price": 139.99,
+      "instructor": "Emily Carter",
+      "isFeatured": false,
+      "image":  "https://images.pexels.com/photos/6949074/pexels-photo-6949074.jpeg"
+    },
+    {
+      "id": 7,
+      "title": "Blues Guitar Improvisation",
+      "slug": "blues-guitar-improvisation",
+      "description": "Learn blues scales, licks, and soloing techniques to improvise confidently over any progression.",
+      "price": 159.99,
+      "instructor": "David Reynolds",
+      "isFeatured": true,
+      "image":  "https://images.pexels.com/photos/30729170/pexels-photo-30729170.jpeg"
+    },
+    {
+      "id": 8,
+      "title": "Guitar Music Theory Basics",
+      "slug": "guitar-music-theory-basics",
+      "description": "Understand scales, keys, and chord construction to become a more well-rounded guitarist.",
+      "price": 119.99,
+      "instructor": "Laura Simmons",
+      "isFeatured": false,
+      "image":  "https://images.pexels.com/photos/7520788/pexels-photo-7520788.jpeg"
+    },
+    {
+      "id": 9,
+      "title": "Advanced Guitar Performance",
+      "slug": "advanced-guitar-performance",
+      "description": "Refine stage-ready techniques, tone control, and dynamics for confident live performance.",
+      "price": 199.99,
+      "instructor": "Michael Foster",
+      "isFeatured": true,
+      "image": "https://images.pexels.com/photos/9150018/pexels-photo-9150018.jpeg"
+    }
+  ]
+}
