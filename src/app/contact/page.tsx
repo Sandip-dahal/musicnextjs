@@ -2,6 +2,11 @@
 import React, {FormEvent, useState} from "react"
 import { Meteors } from "@/components/ui/meteors"
 import { Button } from "@/components/ui/moving-border"
+import { useForm} from "react-hook-form"
+import  axios, { AxiosError }  from "axios"
+import { toast } from "@/components/ui/toast"
+import { Loader2 } from "lucide-react"
+
 
 
 
@@ -9,10 +14,49 @@ function page() {
 
     const [email,setEmail] = useState("")
     const [ message,setMessage] = useState("")
+    const [isError, setIsError] = useState<string>("")
+    const [isLoading, setIsLoading] = useState(false)
 
-    const handleSubmit = (event: FormEvent<HTMLFormElement>) =>{
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) =>{
         event.preventDefault()
-        console.log("Submitted:",{email,message})
+        
+
+        try {
+            setIsLoading(true)
+            setIsError("")
+            const response = await axios.post("/api/ContactUs",{
+                email,
+                message
+            })
+    
+            if(!response || !response.data){
+                setIsError(response.data.message)
+                
+            }
+            console.log("RESPONSE :", response.data.message)
+            toast.add({
+                title : "Succesfully",
+                description : response.data.message,
+                
+            })
+             
+        } catch (error) {
+            console.error("Internal server error while sending data :",error)
+            const errorMessage = axios.isAxiosError(error) ? error.response?.data?.message || "Something went wrong. Please try again." :"Something went wrong. Please try again."
+
+            setIsError(errorMessage)
+            
+
+            toast.add({
+                title:"Error",
+                description : errorMessage
+            })
+            
+        } finally{
+            setIsLoading(false)
+
+        }
+        
     }
   return (
     
@@ -54,10 +98,18 @@ function page() {
                 </textarea>
                 <Button borderRadius="1.75rem"
                 type="submit"
-               className="bg-white dark:bg-slate-900 text-black dark:text-white  dark:border-slate-800"
+                disabled = {isLoading}
+                
+                className="bg-white dark:bg-slate-900 text-black dark:text-white  dark:border-slate-800"
                 >
-                    Send Message
+                    {isLoading  ? (
+                    <Loader2 className="animate-spin"/>
+
+                    ):("Send")}
                 </Button>
+                { isError && (
+                    <p className="text-red-900 text-sm">{isError}</p>
+                )}
                 
             </form>
 
